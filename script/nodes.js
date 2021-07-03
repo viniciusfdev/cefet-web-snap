@@ -11,3 +11,5 @@ const checkWidth = document.getElementById("largura-da-marcacao");
 const checkHeight = document.getElementById("altura-da-marcacao");
 const radioOptions = document.querySelectorAll('input[type="radio"]');
 const filtroFoto = document.getElementById("filtro-da-foto");
+const inputImg = document.getElementById("imagem");
+const mainImg = document.querySelector(".foto-anotada > img");
