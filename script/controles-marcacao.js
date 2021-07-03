@@ -1,10 +1,9 @@
-const controlCheck = document.getElementById("visibilidade-das-marcacoes");
-const checks = document.querySelectorAll(".marcacao");
+function hideChecks(_) {
+  checks.forEach(
+    (c) => (c.style.display = c.style.display !== "none" ? "none" : "block")
+  );
+}
 
 if (controlCheck) {
-  controlCheck.addEventListener("click", (event) => {
-    checks.forEach(
-      (c) => (c.style.display = c.style.display !== "none" ? "none" : "block")
-    );
-  });
+  controlCheck.addEventListener("click", hideChecks);
 }
