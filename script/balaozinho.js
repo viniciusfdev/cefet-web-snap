@@ -1,5 +1,4 @@
 function showBalaozinho(event) {
-  console.log(event);
   const dataTitulo = event.target.dataset["titulo"];
   const dataConteudo = event.target.dataset["conteudo"];
   const dataCor = event.target.dataset["cor"];
@@ -17,5 +16,5 @@ function cleanBalaozinho(event) {
   balaozinho.innerHTML = "";
 }
 
-checks.forEach((c) => c.addEventListener("mouseenter", showBalaozinho));
+checks.forEach((c) => c.addEventListener("mousemove", showBalaozinho));
 checks.forEach((c) => c.addEventListener("mouseleave", cleanBalaozinho));
