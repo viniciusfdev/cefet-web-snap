@@ -30,6 +30,11 @@ function cleanControlls() {
   checkHeight.value = "";
 }
 
+function fillSelected(callback) {
+  const el = document.querySelector(".selecionada");
+  callback(el);
+}
+
 function select(event) {
   const add = event.target.classList.contains("selecionada");
 
@@ -50,4 +55,38 @@ if (controlCheck) {
 }
 
 checks.forEach((c) => c.addEventListener("click", select));
+
+checkTitle.addEventListener("input", (e) =>
+  fillSelected((el) => (el.dataset.titulo = e.target.value))
+);
+checkContent.addEventListener("input", (e) =>
+  fillSelected((el) => (el.dataset.conteudo = e.target.value))
+);
+checkColor.addEventListener("input", (e) =>
+  fillSelected((el) => (el.dataset.cor = e.target.value))
+);
+checkX.addEventListener("input", (e) =>
+  fillSelected((el) => (el.style.left = `${e.target.value}px`))
+);
+checkY.addEventListener("input", (e) =>
+  fillSelected((el) => (el.style.top = `${e.target.value}px)`))
+);
+checkWidth.addEventListener("input", (e) =>
+  fillSelected((el) => (el.style.width = `${e.target.value}px`))
+);
+checkHeight.addEventListener("input", (e) =>
+  fillSelected((el) => (el.style.height = `${e.target.value}px`))
+);
+
+radioOptions.forEach((ro) =>
+  ro.addEventListener("input", (e) =>
+    fillSelected((el) => {
+      el.dataset.formato = e.target.value;
+      el.classList.remove("formato-retangular");
+      el.classList.remove("formato-over");
+      el.classList.add(e.target.value);
+    })
+  )
+);
+
 fillControlls();

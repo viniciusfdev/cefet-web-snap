@@ -10,3 +10,4 @@ const checkColor = document.getElementById("cor-da-marcacao");
 const checkWidth = document.getElementById("largura-da-marcacao");
 const checkHeight = document.getElementById("altura-da-marcacao");
 const radioOptions = document.querySelectorAll('input[type="radio"]');
+var formato = "";
