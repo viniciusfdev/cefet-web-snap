@@ -69,7 +69,7 @@ checkX.addEventListener("input", (e) =>
   fillSelected((el) => (el.style.left = `${e.target.value}px`))
 );
 checkY.addEventListener("input", (e) =>
-  fillSelected((el) => (el.style.top = `${e.target.value}px)`))
+  fillSelected((el) => (el.style.top = `${e.target.value}px`))
 );
 checkWidth.addEventListener("input", (e) =>
   fillSelected((el) => (el.style.width = `${e.target.value}px`))

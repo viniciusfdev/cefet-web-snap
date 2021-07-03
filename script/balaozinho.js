@@ -8,7 +8,7 @@ function showBalaozinho(event) {
   balaozinho.innerHTML = `<h2>${dataTitulo}</h2><p>${dataConteudo}</p>`;
 }
 
-function cleanBalaozinho(event) {
+function cleanBalaozinho(_) {
   balaozinho.innerHTML = "";
 }
 
